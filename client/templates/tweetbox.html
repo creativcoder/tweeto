@@ -1,0 +1,22 @@
+<template name="tweetBox">  
+  <div class="container tweetbox-container">
+    <div class="panel panel-default tweetbox col-md-6">
+      <div class="panel-body">
+        <!-- Text box for tweet content -->
+        <textarea class="form-control" id="tweetText" placeholder="What's happening?" rows="3"></textarea>
+        <!-- Character count & button -->
+        <div class="pull-right btnGroup">
+          <strong class="{{charClass}}">{{charCount}}</strong>
+          <button class="btn btn-info pull-right" type="button" {{disableButton}}>Tweet</button>
+        </div>
+        <br>
+    <br>
+    <hr>
+        {{> feedStack}}
+      </div>
+    </div>
+    
+      
+    
+  </div>
+</template>

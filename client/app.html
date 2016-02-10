@@ -1,0 +1,25 @@
+<head>
+	<meta charset="UTF-8">
+	<title>Twitter</title>
+</head>
+<body>
+	{{> navbar}}
+<br>
+<br><br>
+<br>
+	<div class="container-fluid">
+		<div class="row">
+			{{#if currentUser}}
+			<div class="col-sm-4"></div>
+			<div class="col-sm-3">{{> tweetBox }}</div>
+			<div class="col-sm-4"></div>
+			{{else}}
+			<div class="col-sm-4"></div>
+			<div class="col-sm-4">{{> userManagement}}</div>
+			<div class="col-sm-4"></div>
+			{{/if}}
+		</div>	
+	</div>
+	
+	
+</body>

@@ -1,0 +1,17 @@
+<template name="navbar">
+	<nav class="navbar navbar-default navbar-fixed-top">
+  		<div class="container-fluid">
+    	<div class="collapse navbar-collapse" id="bs-example-navbar-collapse-6"> <ul class="nav navbar-nav"> <li class="active"><a href="#">Home</a>
+    	</li>
+    	<li><a href="#">Trending</a></li>
+    	{{#if currentUser}}
+    	<li><a href="#"><strong>@{{currentUser.username}}</strong></a></li>
+    	<li id="nav-logout"><a href="" class="link">Logout</a></li>
+    	{{else}}
+
+    	{{/if}}
+    	 </ul> 
+    	</div>
+  		</div>
+</nav>
+</template>
