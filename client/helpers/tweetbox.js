@@ -13,7 +13,7 @@ Template.tweetBox.events({
       user:Meteor.user().username,
       timestamp: new Date(),
        });
-    console.log();
+    $('#tweetText').val('');
 	}
 })
 
@@ -30,7 +30,8 @@ Template.tweetBox.helpers({
   },
   disableButton: function() {
     if (Session.get('numChars') <= 0 ||
-        Session.get('numChars') > 140) {
+        Session.get('numChars') > 140||
+        !Meteor.user()) {
       return 'disabled';
     }
   }
