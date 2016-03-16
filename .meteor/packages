@@ -24,3 +24,5 @@ twbs:bootstrap
 accounts-ui
 accounts-password
 momentjs:moment
+patrickml:swal
+dburles:mongo-collection-instances

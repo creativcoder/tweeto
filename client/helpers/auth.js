@@ -4,11 +4,13 @@ Template.userManagement.events({
       username: $('#signup-username').val(),
       password: $('#signup-password').val(),
       profile: {
-        fullname: $('#signup-fullname').val()
+        fullname: $('#signup-fullname').val(),
+        followers: [],
+        following: [],
       }
     };
     Accounts.createUser(user, function (err) {
-    	if(err) alert(err);
+    	if(err) swal("Oops! Something's wrong");
     });
 
 	},
@@ -16,7 +18,7 @@ Template.userManagement.events({
     var username = $('#login-username').val();
     var password = $('#login-password').val();
     Meteor.loginWithPassword(username, password, function(error) {
-      if(error) alert(error);
+      if(error) swal("Looks like you are new here! Signup Please");
     });
   },
   'click #logout': function() {  
